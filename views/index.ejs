@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro & Chronometer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <!-- İkonlar için FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="body">
+    <header class="header">
+        <div class="sol-header">
+            <span class="baslik">Welcome <%= user %>.</span>
+        </div>
+        <div class="sag-header">
+            <div class="mod-ikonlari">
+                <i id="pomo-mod-btn" class="fa-solid fa-business-time mod-btn aktif" title="Pomodoro Modu"></i>
+                <i id="kron-mod-btn" class="fa-solid fa-stopwatch mod-btn" title="Kronometre Modu"></i>
+
+                <div class="cizgi"></div>
+                <img src="logo.jpeg" alt="logo" class="logo">
+            </div>
+        </div>
+    </header>
+
+    <!-- Logonun Altına Gelen Ders Sayacı -->
+    <div id="pomo-bilgi" class="sag-ust-bilgi">
+        <div id="tur-sayaci" class="tur-alani">Tamamlanan Ders: <span>0</span></div>
+    </div>
+
+    <main class="ana-konteyner">
+        <div class="ortak">
+            <!-- DİJİTAL SAYAÇ -->
+            <div class="sayac">
+                <span id="dk">25</span>
+                <span>:    </span>
+                <span id="sn">00</span>
+                <span id="salise-alani" class="gizli">:<span id="salise">00</span></span>
+            </div>
+
+            <!-- BUTONLAR -->
+            <div class="buton-grubu">
+                <button id="bd" class="baslat-btn baslat">Başlat</button>
+                <button id="sifirla" class="sifirla-btn">Sıfırla</button>
+                <button id="tur-btn" class="tur-isaret-btn gizli">İşaretle</button>
+            </div>
+
+            <!-- KRONOMETRE İŞARET LİSTESİ (ŞEFFAF SİYAH) -->
+            <div id="isaret-paneli" class="isaret-paneli gizli">
+                <h3>İşaretlenen Süreler</h3>
+                <ul id="isaret-listesi"></ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
